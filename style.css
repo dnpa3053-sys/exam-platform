@@ -1,0 +1,403 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+
+    background:#0f172a;
+
+    overflow:hidden;
+
+    color:#fff;
+}
+
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    linear-gradient(135deg,#1d4ed8,#2563eb,#0ea5e9,#06b6d4);
+
+    background-size:400% 400%;
+
+    animation:bgMove 15s infinite ease;
+
+    z-index:-2;
+}
+
+.background::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    top:-250px;
+    right:-150px;
+
+    filter:blur(40px);
+}
+
+.background::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.10);
+
+    bottom:-200px;
+    left:-120px;
+
+    filter:blur(50px);
+}
+
+@keyframes bgMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* ===========================
+LOGIN
+=========================== */
+
+.login-card{
+
+    width:420px;
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    padding:40px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(25px);
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.35);
+
+    animation:fadeUp .8s;
+}
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:35px;
+}
+
+.logo i{
+
+    font-size:70px;
+
+    color:#FFD54F;
+
+    margin-bottom:15px;
+}
+
+.logo h1{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+}
+
+.logo p{
+
+    color:#e5e7eb;
+
+    margin-top:8px;
+}
+
+/* ===========================
+INPUT
+=========================== */
+
+.input-group{
+
+    position:relative;
+
+    margin-bottom:20px;
+}
+
+.input-group i{
+
+    position:absolute;
+
+    left:18px;
+
+    top:17px;
+
+    color:#94a3b8;
+}
+
+.input-group input{
+
+    width:100%;
+
+    height:55px;
+
+    padding-left:50px;
+
+    border:none;
+
+    border-radius:15px;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:#fff;
+
+    transition:.3s;
+}
+
+.input-group input:focus{
+
+    transform:scale(1.02);
+
+    box-shadow:0 0 15px rgba(37,99,235,.45);
+}
+
+/* ===========================
+BUTTON
+=========================== */
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    border-radius:14px;
+
+    transition:.3s;
+
+    font-weight:600;
+}
+
+.login-card button{
+
+    width:100%;
+
+    height:55px;
+
+    margin-top:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:17px;
+}
+
+.login-card button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(37,99,235,.45);
+}
+
+/* ===========================
+HEADER
+=========================== */
+
+header{
+
+    width:100%;
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 35px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+header h2{
+
+    font-size:25px;
+
+    font-weight:700;
+}
+
+.timer{
+
+    background:#ef4444;
+
+    color:#fff;
+
+    padding:12px 24px;
+
+    border-radius:40px;
+
+    font-weight:700;
+
+    font-size:20px;
+}
+
+.status{
+
+    background:#10b981;
+
+    padding:12px 20px;
+
+    border-radius:40px;
+
+    font-size:14px;
+}
+
+/* ===========================
+LAYOUT
+=========================== */
+
+.main{
+
+    display:grid;
+
+    grid-template-columns:230px 1fr 300px;
+
+    gap:25px;
+
+    padding:25px;
+
+    height:calc(100vh - 80px);
+}
+
+/* ===========================
+SIDEBAR
+=========================== */
+
+.sidebar{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:20px;
+
+    padding:20px;
+}
+
+.sidebar h3{
+
+    margin-bottom:20px;
+}
+
+#questionNav{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+}
+
+#questionNav button{
+
+    height:45px;
+
+    background:white;
+
+    color:#2563eb;
+
+    font-weight:700;
+}
+
+#questionNav button:hover{
+
+    background:#2563eb;
+
+    color:white;
+}
+
+.fullscreen button{
+
+    width:100%;
+
+    margin-top:25px;
+
+    background:#0ea5e9;
+
+    color:white;
+
+    height:50px;
+}
+
+.warning{
+
+    margin-top:30px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:rgba(255,0,0,.15);
+}

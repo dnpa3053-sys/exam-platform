@@ -1,1 +1,1 @@
-# exam-platform
+# online-exam
